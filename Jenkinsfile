@@ -13,9 +13,9 @@ pipeline {
       }
     }
     stage('deploy to production') {
-      when {
+      /*when {
         branch 'master'
-      }
+      }*/
       steps {
         echo "deploying to production"
       }
