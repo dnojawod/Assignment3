@@ -2,9 +2,6 @@ pipeline {
   agent { docker 'gradle:4.5-jdk8-alpine' }
   stages {
     stage('Build') {
-      environment {
-        HOME="." 
-      }
       steps {
         sh 'gradle clean build'
           junit 'build/test-results/**/TEST-*.xml'
